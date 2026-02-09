@@ -1,4 +1,5 @@
-<?php $title = 'Connexion - ÉchangeObj'; ob_start(); ?>
+<?php $title = 'Connexion - ÉchangeObj';
+ob_start(); ?>
 <div class="row justify-content-center">
   <div class="col-md-6">
     <div class="card shadow-sm">
@@ -9,6 +10,7 @@
             <label class="form-label">Email</label>
             <input type="email" class="form-control" name="email" required>
           </div>
+
           <div class="mb-3">
             <label class="form-label">Mot de passe</label>
             <input type="password" class="form-control" name="password" required>
@@ -23,4 +25,5 @@
   </div>
 </div>
 
-<?php $content = ob_get_clean(); include __DIR__ . '/layout.php'; ?>
+<?php $content = ob_get_clean();
+include __DIR__ . '/layout.php'; ?>

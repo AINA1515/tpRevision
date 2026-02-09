@@ -1,4 +1,5 @@
-<?php $title = ($item['title'] ?? 'Objet') . ' - ÉchangeObj'; ob_start(); ?>
+<?php $title = ($item['title'] ?? 'Objet') . ' - ÉchangeObj';
+ob_start(); ?>
 <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-5">
@@ -18,4 +19,5 @@
   </div>
 </div>
 
-<?php $content = ob_get_clean(); include __DIR__ . '/layout.php'; ?>
+<?php $content = ob_get_clean();
+include __DIR__ . '/layout.php'; ?>

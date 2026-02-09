@@ -37,13 +37,13 @@
   * app/routes
   * public/
 * [x] public/index.php (bootstrap Flight)
-* [x] app/config/database.php
+* [] app/config/database.php
 
 ### 2. Base de données
 
 #### Tables principales
 
-* [x] users (id, username, email, password, avatar, role, created_at)
+* [] users (id, username, email, password, avatar, role, created_at)
 * [ ] categories (id, name, created_at)
 * [ ] objects (id, user_id, category_id, title, description, price_estimate, created_at)
 * [ ] object_photos (id, object_id, file_path)
@@ -52,7 +52,7 @@
 
 #### Données de test
 
-* [x] 4 utilisateurs (user1, user2, user3, admin)
+* [] 4 utilisateurs (user1, user2, user3, admin)
 * [ ] Catégories de test
 * [ ] Objets de test
 * [ ] Échanges simulés
@@ -61,9 +61,9 @@
 
 ## PHASE 2 — AUTHENTIFICATION & SÉCURITÉ
 
-* [x] Login utilisateur
-* [x] Logout
-* [x] Sessions PHP
+* [] Login utilisateur
+* [] Logout
+* [] Sessions PHP
 * [ ] Middleware d’accès (auth / admin)
 * [ ] Hash sécurisé des mots de passe
 
@@ -73,7 +73,7 @@
 
 ### 1. Authentification admin
 
-* [x] Formulaire login admin (login prérempli)
+* [] Formulaire login admin (login prérempli)
 
 ### 2. Gestion des catégories
 

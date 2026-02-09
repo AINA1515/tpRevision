@@ -1,0 +1,175 @@
+# PROJET : Takalo‑Takalo (Échange d’objets)
+
+**Stack** : PHP (FlightMVC) · MySQL/PostgreSQL · Bootstrap (Admin Template)
+**Objectif** : Mettre en place une plateforme d’échange d’objets entre utilisateurs avec backoffice admin et frontoffice utilisateur.
+
+---
+
+## CONTEXTE & MANQUES IDENTIFIÉS
+
+* ❌ Backend PHP structuré
+* ❌ Base de données complète
+* ❌ Authentification & rôles
+* ❌ Logique d’échanges d’objets
+
+---
+
+## PHASE 0 — PRÉPARATION & ORGANISATION
+
+* [ ] Créer le dépôt Git public
+* [ ] Initialiser le projet (README.md)
+* [ ] Lister les membres du projet (Nom + Num ETU)
+* [ ] Créer un board de tâches (GitHub Projects / Trello)
+* [ ] Choisir un template Bootstrap (Admin + Front)
+
+---
+
+## PHASE 1 — BACKEND (FlightMVC)
+
+### 1. Structure du projet
+
+* [x] Installer Flight via Composer
+* [x] Arborescence :
+
+  * app/controllers
+  * app/models
+  * app/config
+  * app/routes
+  * public/
+* [x] public/index.php (bootstrap Flight)
+* [x] app/config/database.php
+
+### 2. Base de données
+
+#### Tables principales
+
+* [x] users (id, username, email, password, avatar, role, created_at)
+* [ ] categories (id, name, created_at)
+* [ ] objects (id, user_id, category_id, title, description, price_estimate, created_at)
+* [ ] object_photos (id, object_id, file_path)
+* [ ] exchanges (id, proposer_id, receiver_id, proposer_object_id, receiver_object_id, status, created_at)
+* [ ] object_history (id, object_id, user_id, exchanged_at)
+
+#### Données de test
+
+* [x] 4 utilisateurs (user1, user2, user3, admin)
+* [ ] Catégories de test
+* [ ] Objets de test
+* [ ] Échanges simulés
+
+---
+
+## PHASE 2 — AUTHENTIFICATION & SÉCURITÉ
+
+* [x] Login utilisateur
+* [x] Logout
+* [x] Sessions PHP
+* [ ] Middleware d’accès (auth / admin)
+* [ ] Hash sécurisé des mots de passe
+
+---
+
+## PHASE 3 — BACKOFFICE (ADMIN)
+
+### 1. Authentification admin
+
+* [x] Formulaire login admin (login prérempli)
+
+### 2. Gestion des catégories
+
+* [ ] Ajouter catégorie
+* [ ] Modifier catégorie
+* [ ] Supprimer catégorie
+
+### 3. Statistiques
+
+* [ ] Nombre total d’utilisateurs
+* [ ] Nombre total d’objets
+* [ ] Nombre total d’échanges effectués
+
+---
+
+## PHASE 4 — FRONT OFFICE (UTILISATEUR)
+
+### 1. Inscription & connexion
+
+* [ ] Page d’inscription
+* [ ] Validation formulaire
+* [ ] Page de login
+
+### 2. Gestion des objets
+
+* [ ] Ajouter un objet
+* [ ] Modifier un objet
+* [ ] Supprimer un objet
+* [ ] Upload 1 ou plusieurs photos
+
+### 3. Consultation des objets
+
+* [ ] Liste des objets (autres utilisateurs)
+* [ ] Fiche objet publique
+
+### 4. Recherche
+
+* [ ] Recherche par titre
+* [ ] Filtre par catégorie
+
+---
+
+## PHASE 5 — SYSTÈME D’ÉCHANGE
+
+* [ ] Proposer un échange (objet A ↔ objet B)
+* [ ] Liste des propositions reçues
+* [ ] Accepter un échange
+* [ ] Refuser un échange
+* [ ] Mise à jour du propriétaire
+* [ ] Historique d’appartenance (public)
+
+---
+
+## PHASE 6 — MESSAGERIE (OPTION / BONUS)
+
+* [x] API Messages (GET / POST)
+* [x] Conversations
+* [x] Lu / Non lu
+* [ ] Intégration avec échanges
+
+---
+
+## PHASE 7 — INTÉGRATION FRONTEND
+
+* [ ] Intégrer Bootstrap Admin Template (Admin)
+* [ ] Intégrer Bootstrap Front Template (User)
+* [ ] Navbar dynamique (login/logout)
+* [ ] Footer avec noms + num ETU
+
+---
+
+## PHASE 8 — TESTS & VALIDATION
+
+* [ ] Tests authentification
+* [ ] Tests CRUD objets
+* [ ] Tests échanges
+* [ ] Tests recherche
+* [ ] Cas limites (données vides, erreurs)
+
+---
+
+## PHASE 9 — LIVRAISON
+
+* [ ] Lien Git public
+* [ ] Lien liste des tâches
+* [ ] Base de données fonctionnelle
+* [ ] Site déployable en local
+
+---
+
+## BONUS (SI TEMPS)
+
+* [ ] Notifications
+* [ ] Pagination
+* [ ] Historique graphique des échanges
+
+---
+
+**Statut global du projet** : 🚧 En cours

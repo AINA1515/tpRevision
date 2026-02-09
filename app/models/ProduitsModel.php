@@ -15,6 +15,8 @@ class ProduitsModel
 
     public function getProduits()
     {
+        return [];
+
         $stmt = $this->db->prepare("SELECT * FROM produits");
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
@@ -22,6 +24,7 @@ class ProduitsModel
 
     public function getProduit($id)
     {
+        return [];
         $stmt = $this->db->prepare("SELECT * FROM produits WHERE id = :id");
         $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
         $stmt->execute();

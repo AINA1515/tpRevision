@@ -24,7 +24,6 @@ $router->group('', function (Router $router) use ($app) {
 		$produits = $controlleur->fetchProduit($id);
 		$app->render('produit', ['produits' => $produits]);
 	});
-
 	// $router->get('/hello-world/@name', function ($name) {
 	// 	echo '<h1>Hello world! Oh hey ' . $name . '!</h1>';
 	// });
@@ -35,3 +34,27 @@ $router->group('', function (Router $router) use ($app) {
 	// 	$router->post('/users/@id:[0-9]', [ApiExampleController::class, 'updateUser']);
 	// });
 }, [SecurityHeadersMiddleware::class]);
+
+$router->group('/admin', function (Router $router) use ($app) {
+	$router->get('/', function () use ($app) {
+		$app->render('admin_login', ['adminCredentials' => $app->get('admin_credentials'), 'csp_nonce' => $app->get('csp_nonce')]);
+	});
+
+	$router->post('/login', function() use ($app){
+		$username = $app->request()->data['username'];
+		$pwd = $app->request()->data['password'];
+
+		$valid_credentials = true;
+
+		// validate user input
+		if($valid_credentials){
+			// send to dashboard
+			$app->render('admin_dashboard',['csp_nonce' => $app->get('csp_nonce')]);
+		} else{
+			// redirect to admin_login and show error message
+			$app->render('admin_login', ['adminCredentials' => $app->get('admin_credentials'), 'csp_nonce' => $app->get('csp_nonce'), 'message' => "Failed to login. Check your username and password."]);
+		}
+	});
+
+}, [SecurityHeadersMiddleware::class]);
+

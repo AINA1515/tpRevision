@@ -59,6 +59,9 @@ $app->set('flight.content_length', false);    // Send content length header. Usu
 $nonce = bin2hex(random_bytes(16));
 $app->set('csp_nonce', $nonce);
 
+// user defined variable
+$app->set('admin_credentials', ["username"=>"admin","password"=>"1234"]);
+
 /**********************************************
  *           User Configuration               *
  **********************************************/
@@ -69,10 +72,10 @@ return [
 	'database' => [
 		// MySQL Example:
 		'host'     => 'localhost',      // Database host (e.g., 'localhost', 'db.example.com')
-		'dbname'   => 'firstMvc',   // Database name (e.g., 'flightphp')
+		'dbname'   => 'cinema',   // Database name (e.g., 'flightphp')
 		'user'     => 'postgres',  // Database user (e.g., 'root')
-		'password' => 'lol15',  // Database password (never commit real passwords)
-
+		'password' => '1234',  // Database password (never commit real passwords)
+        'port' => '5432',
 		// SQLite Example:
 		// 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite', // Path to SQLite file
 	],

@@ -72,7 +72,6 @@ return [
 		'dbname'   => 'firstMvc',   // Database name (e.g., 'flightphp')
 		'user'     => 'postgres',  // Database user (e.g., 'root')
 		'password' => 'lol15',  // Database password (never commit real passwords)
-
 		// SQLite Example:
 		// 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite', // Path to SQLite file
 	],

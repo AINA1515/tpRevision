@@ -1,46 +1,40 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php $title = 'Accueil - ÉchangeObj';
+ob_start(); ?>
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-3 text-center">
+        <h1 class="display-6">Donnez. Récupérez. Partagez.</h1>
+        <p class="lead">Plateforme simple pour échanger des objets entre voisins.</p>
+        <a class="btn btn-primary btn-lg me-2" href="/listings">Voir les objets</a>
+        <a class="btn btn-outline-secondary btn-lg" href="/register">S'inscrire</a>
+    </div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - E-commerce</title>
-    <link rel="stylesheet" href="assets/styles.css">
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="/" class="logo">E-Varotra</a>
-                <ul class="menu">
-                    <li><a href="/">Accueil</a></li>
-                </ul>
-            </nav>
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Facile</h5>
+                <p class="card-text">Publiez en quelques clics et trouvez des objets près de chez vous.</p>
+            </div>
         </div>
-    </header>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sûr</h5>
+                <p class="card-text">Profils vérifiés et échanges responsables.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Local</h5>
+                <p class="card-text">Favorisez l'économie circulaire dans votre quartier.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <main>
-        <h1>Bienvenue sur notre boutique</h1>
-        <section class="product-list">
-            <?php
-            foreach ($produits as $p) {
-            ?>
-                <article class="product-card">
-                    <a href="/produit/<?= $p["id"]?>">
-                        <img src="assets/images/<?= $p["image"] ?>" alt="Produit <?= $p["id"] ?>">
-                        <h2><?= $p["nom"] ?></h2>
-                        <p><?= $p["prix"] ?></p>
-                    </a>
-                </article>
-
-            <?php }
-            ?>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 E-Varotra</p>
-    </footer>
-</body>
-
-</html>
+<?php $content = ob_get_clean();
+include __DIR__ . '/layout.php'; ?>

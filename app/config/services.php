@@ -83,9 +83,9 @@ if (Debugger::$showBar === true && php_sapi_name() !== 'cli') {
 // $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
 
 // Configuration PostgreSQL
-$dsn = 'pgsql:host=' . $config['database']['host']
-	. ';port=' . $config['database']['port']
-	. ';dbname=' . $config['database']['dbname'];
+// $dsn = 'pgsql:host=' . $config['database']['host']
+// 	. ';port=' . $config['database']['port']
+// 	. ';dbname=' . $config['database']['dbname'];
 
 
 // SQLite Example:
@@ -93,8 +93,8 @@ $dsn = 'pgsql:host=' . $config['database']['host']
 
 // Register Flight::db() service
 // In development, use PdoQueryCapture to log queries; in production, use PdoWrapper for performance.
-$pdoClass = Debugger::$showBar === true ? PdoQueryCapture::class : PdoWrapper::class;
-$app->register('db', $pdoClass, [ $dsn, $config['database']['user'] ?? null, $config['database']['password'] ?? null ]);
+// $pdoClass = Debugger::$showBar === true ? PdoQueryCapture::class : PdoWrapper::class;
+// $app->register('db', $pdoClass, [ $dsn, $config['database']['user'] ?? null, $config['database']['password'] ?? null ]);
 
 /**********************************************
  *         Third-Party Integrations           *

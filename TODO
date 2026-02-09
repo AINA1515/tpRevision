@@ -18,9 +18,9 @@
 
 * [ ok ] Créer le dépôt Git public
 * [ ok ] Initialiser le projet (README.md)
-* [ ] Lister les membres du projet (Nom + Num ETU)
-* [ ] Créer un board de tâches (GitHub Projects / Trello)
-* [ ] Choisir un template Bootstrap (Admin + Front)
+* [ ok ] Lister les membres du projet (Nom + Num ETU)
+* [ ok ] Créer un board de tâches (GitHub Projects / Trello)
+* [ wip ] Choisir un template Bootstrap (Admin + Front)
 
 ---
 
@@ -68,7 +68,7 @@
 * [ ] Hash sécurisé des mots de passe
 
 ---
-
+<!-- 
 ## PHASE 3 — BACKOFFICE (ADMIN)
 
 ### 1. Authentification admin
@@ -87,7 +87,7 @@
 * [ ] Nombre total d’objets
 * [ ] Nombre total d’échanges effectués
 
----
+--- -->
 
 ## PHASE 4 — FRONT OFFICE (UTILISATEUR)
 

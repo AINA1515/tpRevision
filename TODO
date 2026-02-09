@@ -16,8 +16,8 @@
 
 ## PHASE 0 — PRÉPARATION & ORGANISATION
 
-* [ ] Créer le dépôt Git public
-* [ ] Initialiser le projet (README.md)
+* [ ok ] Créer le dépôt Git public
+* [ ok ] Initialiser le projet (README.md)
 * [ ] Lister les membres du projet (Nom + Num ETU)
 * [ ] Créer un board de tâches (GitHub Projects / Trello)
 * [ ] Choisir un template Bootstrap (Admin + Front)
@@ -129,9 +129,9 @@
 
 ## PHASE 6 — MESSAGERIE (OPTION / BONUS)
 
-* [x] API Messages (GET / POST)
-* [x] Conversations
-* [x] Lu / Non lu
+* [] API Messages (GET / POST)
+* [] Conversations
+* [] Lu / Non lu
 * [ ] Intégration avec échanges
 
 ---

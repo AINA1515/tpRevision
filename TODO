@@ -43,19 +43,19 @@
 
 #### Tables principales
 
-* [] users (id, username, email, password, avatar, role, created_at)
-* [ ] categories (id, name, created_at)
-* [ ] objects (id, user_id, category_id, title, description, price_estimate, created_at)
-* [ ] object_photos (id, object_id, file_path)
-* [ ] exchanges (id, proposer_id, receiver_id, proposer_object_id, receiver_object_id, status, created_at)
-* [ ] object_history (id, object_id, user_id, exchanged_at)
+* [ok] users (id, username, email, password, avatar, role, created_at)
+* [ok] categories (id, name, created_at)
+* [ok] objects (id, user_id, category_id, title, description, price_estimate, created_at)
+* [ok] object_photos (id, object_id, file_path)
+* [ok] exchanges (id, proposer_id, receiver_id, proposer_object_id, receiver_object_id, status, created_at)
+* [ok] object_history (id, object_id, user_id, exchanged_at)
 
 #### Données de test
 
-* [] 4 utilisateurs (user1, user2, user3, admin)
-* [ ] Catégories de test
-* [ ] Objets de test
-* [ ] Échanges simulés
+* [ok] 3 utilisateurs (user1, user2, user3, admin)
+* [ok] Catégories de test
+* [ok] Objets de test
+* [ok] Échanges simulés
 
 ---
 

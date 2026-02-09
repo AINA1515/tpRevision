@@ -30,7 +30,7 @@ create table objets_photo(
     id int primary key AUTO_INCREMENT,
     objet_id int,
     photo_url varchar(250)
-);
+);2
 
 create table exchanges(
     id int primary key AUTO_INCREMENT,
